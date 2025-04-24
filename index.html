@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday - Page 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe4e1, #ffb6c1); /* Soft pastel gradient */
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      color: #5d3a00;
+      overflow-y: auto;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    /* Decorative Side Flourishes */
+    .decor-left, .decor-right {
+      position: absolute;
+      top: 0;
+      width: 15%;
+      height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2016/05/05/02/36/flower-1373800_960_720.jpg') no-repeat center;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    .decor-left {
+      left: 0;
+      opacity: 0.3;
+    }
+
+    .decor-right {
+      right: 0;
+      opacity: 0.3;
+    }
+
+    /* Added soft floral background pattern */
+    .background-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.pixabay.com/photo/2017/08/30/01/39/flowers-2694377_960_720.jpg') repeat;
+      z-index: -2;
+      opacity: 0.1; /* Light opacity for a subtle effect */
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      margin: 40px auto;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      animation: fadeIn 1.5s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff69b4; /* Romantic pink */
+      text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8); /* Glowy effect */
+    }
+
+    p {
+      font-size: 1.4em;
+      margin-top: 15px;
+    }
+
+    .next-btn {
+      margin-top: 30px;
+      background-color: #ff69b4;
+      border: none;
+      padding: 12px 25px;
+      color: white;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background-color: #ff1493; /* Darker pink on hover */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: fixed;
+      bottom: -100px;
+      font-size: 2rem;
+      color: red;
+      animation: floatHeart 6s infinite;
+      opacity: 0.7;
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 25%; animation-delay: 1s; }
+    .heart:nth-child(3) { left: 40%; animation-delay: 2s; }
+    .heart:nth-child(4) { left: 60%; animation-delay: 1.5s; }
+    .heart:nth-child(5) { left: 80%; animation-delay: 0.5s; }
+
+    @keyframes floatHeart {
+      0% { bottom: -100px; transform: scale(0.8) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { bottom: 100vh; transform: scale(1.2) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Pattern -->
+  <div class="background-pattern"></div>
+
+  <!-- Decorative Flourishes on Left and Right -->
+  <div class="decor-left"></div>
+  <div class="decor-right"></div>
+
+  <!-- Floating Hearts -->
+  <div class="heart">❤️</div>
+  <div class="heart">💖</div>
+  <div class="heart">💘</div>
+  <div class="heart">💕</div>
+  <div class="heart">❤️</div>
+
+  <!-- Main Card -->
+  <div class="card">
+    <h1>Happy Birthday, Rani Sahiba! 👑</h1>
+    <p>Namaste ji 👑, Aapke Charno Mein mera koti koti pranam.</p>
+    <p>Your Sewak Reporting Madam 🫡</p>
+
+    <button class="next-btn" onclick="location.href='page2.html'">Next ➜</button>
+  </div>
+</body>
+</html>
